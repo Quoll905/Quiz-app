@@ -1,0 +1,197 @@
+* {margin: 0px; padding: 0px;}
+body {
+    height: 100vh; 
+    width: 100vw; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    flex-direction: column;
+    /* background: rgb(0,41,255);
+    background: linear-gradient(0deg, rgba(0,41,255) 23%, rgba(30,146,223,1) 57%, rgba(53,220,245) 90%); */
+    background: url('../foto1.jpg');
+    background-size: 200px;
+    background-repeat: repeat;
+}
+
+.opacity {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    z-index: -1;
+}
+
+.title {
+    margin-top: 70px;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 100px;
+    color: #512500;
+    font-family: sans-serif;
+    animation: rotate 5s infinite;
+}
+
+.button_start {
+    margin:50px; 
+    height: 130px; 
+    width: 250px; 
+    font-size: 2.5rem; 
+    border-radius: 20px;
+    background-color: #2B4162; color: #E0E0E2;
+    border: 0px;
+    font-family: sans-serif;
+    font-weight: 600;
+    animation: pulse 1s linear infinite;
+}
+
+.button_start:hover { 
+    color: white; 
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.question_container {
+    border-radius: 25px;
+    padding: 10px;
+    margin: 15px;
+    text-align: center;
+    width: calc(100vw - 210px - 10vw);
+    background-color: #E0E0E2;
+    border: 2px solid #2B4162;
+    margin-left: 5vw;
+}
+
+.answer_container {display: flex; flex-flow: wrap; flex-direction: row; align-items: center; justify-content: center;}
+
+.answer {
+    background-color: #2B4162;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    color: #E0E0E2;
+    min-height: 50px;
+    min-width: 100px;
+    font-size: 1.15rem;
+    font-family: sans-serif;
+    border: none;
+}
+
+.answer:hover {background-color: blue; color:white}
+
+.choose_category {
+    display: block; 
+    font-size: 16px; 
+    font-weight: 500; 
+    color: #444; 
+    line-height: 2; 
+    padding: .6em 1.4em .5em .8em; 
+    width: 40%;
+    max-width: 50%; 
+    box-sizing: border-box; 
+    border: 1px solid #aaa; 
+    border-radius: .5em; 
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+    text-emphasis: none;
+}
+
+.choose_category:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 2px rgba(59, 153, 252, .7);
+    color: #222; 
+    outline: none;
+    margin-top: 50px;
+}
+
+.question_div {
+    height: auto;
+    width: 100%;
+    display: none;
+}
+
+.loadmore_container {
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+
+.statistics_container {
+    right: 10px;
+    position: fixed;
+    border-radius: 15px;
+    height: 97vh;
+    width: 180px;
+    top: 1vw;
+    background-color: #E0E0E2;
+    border: 2px solid #2B4162;
+    display: none;
+}
+
+.statistics_text_container {
+    text-align: center;
+    font-size: medium;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #512500;
+    font-family: sans-serif;
+}
+
+.statistics_back_button_container {
+    width: 100%;
+    text-align: center;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.statistics_back_button {
+    background-color: #104911;
+    height: 50px;
+    width: 100px;
+    color: white;
+    font-size: medium;
+    border-radius: 10px;
+    font-family: sans-serif;
+    border: 0px;
+}
+
+.statistics_back_button:hover {
+    background-color: #721817;
+    transform: scale(1.2)
+}
+
+
+
+@keyframes pulse {
+
+    0% { transform: scale(1) } 
+   25% { transform: scale(1.1) } 
+   50% { transform: scale(1) } 
+   75% { transform: scale(0.9) } 
+   100% { transform: scale(1) }
+   
+}
+
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    40% { transform: rotate(15deg); } 
+   55% { transform: rotate(-10deg); } 
+   75% { transform: rotate(5deg); } 
+   95% { transform: rotate(-5deg); } 
+   100% { transform: rotate(0deg); } 
+}

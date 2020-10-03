@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Quiz App</title>
+</head>
+<body>
+
+    <div class="opacity"></div>
+
+    <h1 class="title">Quizz app</h1>
+
+    <select name='choose_category' class='choose_category'>
+        <option value='any'>Any category</option>
+        <option value='9'>General knowledge</option>
+        <option value='10'>Books</option>
+        <option value='11'>Film</option>
+        <option value='12'>Music</option>
+        <option value='15'>Video Games</option>
+        <option value='17'>Science and nature</option>
+        <option value='18'>Computers</option>
+        <option value='19'>Mathematics</option>
+        <option value='21'>Sports</option>
+        <option value='22'>Geography</option>
+        <option value='23'>History</option>
+    </select>
+
+    <button class="button_start" onclick="startQuiz()">Start!</button>
+    
+    <div class='question_div'>
+    </div>
+
+    <div class="loadmore_container">
+        <p id="loadMore">Loading...</p>
+    </div>
+
+    <div class="statistics_container">
+        <div class="statistics_text_container">
+            <h2 class='stat_cat'>Category:</h2>
+            <h2 class='stat_tot'>Total question:</h2>
+            <h2 class='stat_right' style="color:green;">Right: 0</h2>
+            <h2 class='stat_wrong' style="color:red;">Wrong: 0</h2>
+        </div>
+        <div class='statistics_back_button_container'>
+            <button class="statistics_back_button" onclick="resetAll()">
+                BACK
+            </button>
+        </div>
+    </div>
+
+
+    <!-- <div id="myProgress">
+        <div id="myBar">20000</div>
+    </div> -->
+
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
